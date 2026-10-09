@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>二级水平导航菜单</title>
+    <style>
+       * {
+            margin:0;
+            padding:0;
+            list-style: none;
+        }
+        body{
+            background:#fff;
+        }
+        .logo{
+            font-size:20px;
+            padding:10px 30px;
+            font-weight:bold;
+        }
+        /*一级菜单ul*/
+        ul:nth-child(2){
+            display:flex;
+            background-color:#2c5282;
+            width:fit-content;
+            margin-left:30px;
+        }
+        ul:nth-child(2)>li{
+            position:relative;
+        }
+        ul:nth-child(2)>li>a{
+            display:block;
+            padding:12px 18px;
+            color:#fff;
+            text-decoration:none;
+        }
+        ul:nth-child(2)>li>a:hover{
+            background-color:#4299e1;
+        }
+        /*二级下拉菜单*/
+        ul:nth-child(2)>li>ul{
+            position:absolute;
+            top:100%;
+            left:0;
+            background:#fff;
+            border:1px solid #ccc;
+            display:none;
+        }
+        ul:nth-child(2)>li>ul>li>a{
+            display:block;
+            padding:10px 18px;
+            color:#333;
+            text-decoration:none;
+        }
+        ul:nth-child(2)>li>ul>li>a:hover{
+            background:#e8f0fe;
+        }
+        /*hover显示二级菜单*/
+        ul:nth-child(2)>li:hover>ul{
+            display:block;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li class="logo">欢迎访问湖南文理学院</li>
+    </ul>
+    <ul>         
+        <li><a href="#">首页</a></li>
+        <li><a href="#">教学院(部)</a>
+            <ul>
+                <li><a href="#">计算机与电气工程学院</a></li>
+                <li><a href="#">芙蓉学院</a></li>
+            </ul>
+        </li>
+        <li><a href="#">党群机构</a></li>        
+        <li><a href="#">行政教辅机构</a></li>
+        <li><a href="#">教学科研</a></li>
+        <li><a href="#">招生就业</a></li>
+        <li><a href="#">国际交流</a></li>
+        <li><a href="#">数字图书馆</a></li>
+    </ul>    
+</body>
+</html>
